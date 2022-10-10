@@ -1,8 +1,8 @@
 <template>
   <section class="container">
-    <h1>Top Page</h1>
+    <h1>My Page</h1>
     <hr />
-    <router-link to="/mypage">My Pageへ</router-link>
+    <router-link to="/">Topへ</router-link>
   </section>
 </template>
 
