@@ -9,3 +9,8 @@
 <script>
 export default {};
 </script>
+<style>
+.container {
+  font-family: "Permanent Marker", cursive;
+}
+</style>

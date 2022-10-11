@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "nuxt-first-tutrial",
+    title: "Hello Nuxt.js!",
     htmlAttrs: {
-      lang: "en",
+      lang: "ja",
     },
     meta: [
       { charset: "utf-8" },
@@ -12,6 +12,12 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap",
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
