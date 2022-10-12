@@ -12,11 +12,16 @@
 
 <script>
 const axios = require("axios");
-let url = "https://jsonplaceholder.typicode.com/users";
+let url = "https://jsonplaceholder.typicode.com/usersxxx";
 export default {
-  async asyncData({ $axios }) {
-    const res = await $axios.$get(url);
-    return { users: res };
+  async asyncData({ $axios, error }) {
+    try {
+      const res = await $axios.$get(url);
+      return { users: res };
+    } catch (err) {
+      // const statusCode = err.response ? err.response.status : 500;
+      error({ statusCode: 404, message: "ページが見つかりません" });
+    }
   },
 };
 </script>
