@@ -1,16 +1,20 @@
 <template>
   <section class="container">
-    <h1>Top Page</h1>
-    <hr />
-    <router-link to="/mypage">My Pageへ</router-link>
+    <div>
+      {{ users[0].id }}
+      {{ users[0].name }}
+    </div>
   </section>
 </template>
 
 <script>
-export default {};
+const axios = require("axios");
+let url = "https://jsonplaceholder.typicode.com/users";
+export default {
+  async asyncData({ $axios }) {
+    const res = await $axios.$get(url);
+    return { users: res };
+  },
+};
 </script>
-<style>
-.container {
-  font-family: "Permanent Marker", cursive;
-}
-</style>
+<style></style>
