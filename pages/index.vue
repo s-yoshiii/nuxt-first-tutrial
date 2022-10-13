@@ -20,7 +20,6 @@ export default {
       const res = await $axios.$get(url);
       return { users: res };
     } catch (err) {
-      // const statusCode = err.response ? err.response.status : 500;
       error({ statusCode: 404, message: "ページが見つかりません" });
     }
   },
